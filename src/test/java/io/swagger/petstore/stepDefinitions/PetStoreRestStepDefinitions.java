@@ -21,11 +21,13 @@ public class PetStoreRestStepDefinitions {
 
   @Given("^que me encuentro con la url de Pet store$")
   public void queMeEncuentroConLaUrlDePetStore() {
+    // se utiliza la url de la API
     OnStage.theActorCalled("user").whoCan(CallAnApi.at("https://petstore.swagger.io/"));
   }
 
   @When("^realice el crud de los servicios relacionados a mascota$")
   public void realiceElCrudDeLosServiciosRelacionadosAMascota() {
+    // se realiza la ejecucion de las interacciones mencionadas.
     OnStage.theActorInTheSpotlight()
         .attemptsTo(
             PostMascotaRest.on(),
@@ -39,6 +41,7 @@ public class PetStoreRestStepDefinitions {
 
   @Then("^validare que el codigo de estado del servicio final sea (\\d+)$")
   public void validareQueElCodigoDeEstadoDelServicioFinalSea(String estado) {
+    // se realiza la validacion en el que el codigo de respuesta sea el correcto
     OnStage.theActorInTheSpotlight()
         .should(GivenWhenThen.seeThat(CodigoEstado.delServicio(estado)));
   }

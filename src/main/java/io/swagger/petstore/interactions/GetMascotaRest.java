@@ -8,6 +8,10 @@ import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.rest.interactions.Get;
 
 public class GetMascotaRest implements Interaction {
+
+
+  // dentro de la url correspondiente se coloca "PostMascotaRest.getId()",
+  // para utilizar la id (ya generado aleatoriamente) que se uso en el post y consultar la mascota que se creo.
   @Override
   public <T extends Actor> void performAs(T actor) {
     actor.attemptsTo(

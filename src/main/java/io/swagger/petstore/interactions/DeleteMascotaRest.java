@@ -9,6 +9,8 @@ import net.serenitybdd.screenplay.rest.interactions.Delete;
 
 public class DeleteMascotaRest implements Interaction {
 
+  // dentro de la url correspondiente se coloca "PostMascotaRest.getId()",
+  // para utilizar la id (ya generado aleatoriamente) que se uso en el post y eliminar la mascota que se creo.
   @Override
   public <T extends Actor> void performAs(T actor) {
     actor.attemptsTo(

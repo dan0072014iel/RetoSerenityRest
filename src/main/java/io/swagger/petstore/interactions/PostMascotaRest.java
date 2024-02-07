@@ -10,14 +10,17 @@ import net.serenitybdd.screenplay.rest.interactions.Post;
 
 public class PostMascotaRest implements Interaction {
 
+  //se declara la variable id a usar en el body
   private static int id = generateRandomId();
 
+  //metodo para generar una id aleatoria desde 110 hasta 110
   private static int generateRandomId() {
     Random random = new Random();
     int min = 100, max = 110, range = max - min + 1;
     return random.nextInt(range) + min;
   }
 
+  //se guarda la variable id que se genero al principio, esto se hace para ser utilizada en las otras clases (get, put y delete) y no generar otro numero.
   public static int getId() {
     return id;
   }

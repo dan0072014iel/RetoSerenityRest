@@ -9,6 +9,8 @@ import net.serenitybdd.screenplay.rest.interactions.Put;
 
 public class PutMascotaRest implements Interaction {
 
+  // dentro del body se coloca "PostMascotaRest.getId()",
+  // para utilizar la id (ya generado aleatoriamente) que se uso en el post y actualizar la mascota que se creo.
   @Override
   public <T extends Actor> void performAs(T actor) {
     String json =
