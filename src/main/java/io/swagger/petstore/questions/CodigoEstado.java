@@ -7,7 +7,6 @@ import net.serenitybdd.screenplay.Question;
 public class CodigoEstado implements Question<Boolean> {
 
 
-  //se obtiene el codigo  del ultimo response y se guarda para luego compararlo en stepDefinitions
   private final String codigoExpectativa;
 
   public CodigoEstado(String codigoExpectativa) {
